@@ -1,0 +1,65 @@
+{
+  "blockers": [
+    "No original C/C++ source or native project files were found.",
+    "Ghidra pseudocode contains unresolved platform types, globals, stack symbols, and function declarations and does not compile as C as-is.",
+    "No Windows-targeting compiler/linker or Windows/DirectX SDK headers are installed.",
+    "The original compiler version and build flags remain unidentified."
+  ],
+  "candidate_binary": null,
+  "comparison": {
+    "byte_identical": null,
+    "mismatch_bytes": null,
+    "status": "not-run-no-rebuilt-binary"
+  },
+  "compileability_probe": {
+    "compiler": "/usr/bin/cc",
+    "exit_code": 1,
+    "passed": false,
+    "stderr_excerpt": "/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c: In function \u2018entry\u2019:\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:7:3: error: unknown type name \u2018DWORD\u2019\n    7 |   DWORD DVar1;\n      |   ^~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:9:3: error: unknown type name \u2018HMODULE\u2019\n    9 |   HMODULE pHVar3;\n      |   ^~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:10:3: error: unknown type name \u2018UINT\u2019\n   10 |   UINT UVar4;\n      |   ^~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:11:3: error: unknown type name \u2018_STARTUPINFOA\u2019\n   11 |   _STARTUPINFOA local_60;\n      |   ^~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:12:3: error: unknown type name \u2018undefined1\u2019\n   12 |   undefined1 *local_1c;\n      |   ^~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:13:3: error: unknown type name \u2018_EXCEPTION_POINTERS\u2019\n   13 |   _EXCEPTION_POINTERS *local_18;\n      |   ^~~~~~~~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:15:3: error: unknown type name \u2018undefined1\u2019\n   15 |   undefined1 *puStack_10;\n      |   ^~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:16:3: error: unknown type name \u2018undefined\u2019\n   16 |   undefined *puStack_c;\n      |   ^~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:17:3: error: unknown type name \u2018undefined4\u2019\n   17 |   undefined4 local_8;\n      |   ^~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:20:16: error: \u2018DAT_004426d8\u2019 undeclared (first use in this function)\n   20 |   puStack_c = &DAT_004426d8;\n      |                ^~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:20:16: note: each undeclared identifier is reported only once for each function it appears in\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:21:17: error: \u2018LAB_00439ae0\u2019 undeclared (first use in this function)\n   21 |   puStack_10 = &LAB_00439ae0;\n      |                 ^~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:22:16: error: \u2018ExceptionList\u2019 undeclared (first use in this function)\n   22 |   pvStack_14 = ExceptionList;\n      |                ^~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:23:15: error: \u2018stack0xffffff88\u2019 undeclared (first use in this function)\n   23 |   local_1c = &stack0xffffff88;\n      |               ^~~~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:25:11: warning: implicit declaration of function \u2018GetVersion\u2019 [-Wimplicit-function-declaration]\n   25 |   DVar1 = GetVersion();\n      |           ^~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:26:3: error: \u2018_DAT_004505f4\u2019 undeclared (first use in this function)\n   26 |   _DAT_004505f4 = DVar1 >> 8 & 0xff;\n      |   ^~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:27:3: error: \u2018_DAT_004505f0\u2019 undeclared (first use in this function)\n   27 |   _DAT_004505f0 = DVar1 & 0xff;\n      |   ^~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:28:3: error: \u2018_DAT_004505ec\u2019 undeclared (first use in this function)\n   28 |   _DAT_004505ec = _DAT_004505f0 * 0x100 + _DAT_004505f4;\n      |   ^~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:29:3: error: \u2018_DAT_004505e8\u2019 undeclared (first use in this function)\n   29 |   _DAT_004505e8 = DVar1 >> 0x10;\n      |   ^~~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:30:11: warning: implicit declaration of function \u2018FUN_0043ce11\u2019 [-Wimplicit-function-declaration]\n   30 |   iVar2 = FUN_0043ce11(1);\n      |           ^~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:32:5: warning: implicit declaration of function \u2018FUN_00439552\u2019 [-Wimplicit-function-declaration]\n   32 |     FUN_00439552(0x1c);\n      |     ^~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:34:11: warning: implicit declaration of function \u2018FUN_00439643\u2019 [-Wimplicit-function-declaration]\n   34 |   iVar2 = FUN_00439643();\n      |           ^~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:39:3: warning: implicit declaration of function \u2018FUN_0043af63\u2019 [-Wimplicit-function-declaration]\n   39 |   FUN_0043af63();\n      |   ^~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:40:3: error: \u2018DAT_00451cf4\u2019 undeclared (first use in this function)\n   40 |   DAT_00451cf4 = GetCommandLineA();\n      |   ^~~~~~~~~~~~\n/workspaces/bbbsil/analysis/phase2/decompiled/functions/00439425_entry.c:40:18: warning: implicit declaration of function \u2018GetCommandLineA\u2019 [-Wimp"
+  },
+  "decompiler_output": {
+    "assembly_fallback_count": 1,
+    "compileable_as_is": false,
+    "function_count": 878,
+    "pseudocode_count": 877,
+    "unresolved_count": 0
+  },
+  "function_level_build_proof": {
+    "byte_identical": true,
+    "compiled_bytes": "c70164244400c3",
+    "function": "FUN_00424010",
+    "original_bytes": "c70164244400c3",
+    "scope": "function-object-batch; not a full-game executable"
+  },
+  "gate_passed": false,
+  "host_compilers": {
+    "cc": "/usr/bin/cc",
+    "clang": "/usr/bin/clang",
+    "gcc": "/usr/bin/gcc"
+  },
+  "original_source_candidate_count": 0,
+  "original_source_candidates": [],
+  "phase": 3,
+  "reference_binary": {
+    "name": "Bbb.exe",
+    "sha256": "67bad421c57cdc7045513bc2c03375e5a01dd41b9b449b5333f06b4bc98a5713",
+    "size": 303104
+  },
+  "required_next_action": "Recover usable original source/project inputs, or continue an evidence-backed source reconstruction before attempting a native rebuild.",
+  "schema_version": 1,
+  "status": "blocked",
+  "windows_build_tools": {
+    "cl": null,
+    "clang-cl": null,
+    "i686-w64-mingw32-g++": null,
+    "i686-w64-mingw32-gcc": null,
+    "i686-w64-mingw32-ld": null,
+    "lld-link": null,
+    "x86_64-w64-mingw32-gcc": null
+  },
+  "windows_sdk_headers_found": {
+    "ddraw.h": false,
+    "dsound.h": false,
+    "windows.h": false
+  }
+}

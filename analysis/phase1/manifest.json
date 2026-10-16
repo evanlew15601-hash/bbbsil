@@ -1,0 +1,329 @@
+{
+  "artifacts": [
+    {
+      "offset": 39453,
+      "path": "Bbb.exe",
+      "sha256": "67bad421c57cdc7045513bc2c03375e5a01dd41b9b449b5333f06b4bc98a5713",
+      "size": 303104,
+      "source": "Setup.dat"
+    },
+    {
+      "offset": 57529006,
+      "path": "Cuninst.exe",
+      "sha256": "05507eee089c3b6cdf249aa65a773f4acab300218c1baea14047c9348ebf373d",
+      "size": 90112,
+      "source": "Setup.dat"
+    }
+  ],
+  "coverage": [
+    {
+      "exact": true,
+      "input": "Setup.exe",
+      "input_size": 471040,
+      "mapped_bytes": 471040
+    },
+    {
+      "exact": true,
+      "input": "Setup.dat",
+      "input_size": 58446081,
+      "mapped_bytes": 58446081
+    }
+  ],
+  "embedded_images": [
+    {
+      "architecture": "Intel 80386",
+      "classification": "game-executable",
+      "endianness": "little",
+      "entry_rva": 234533,
+      "evidence": [
+        "DirectDrawCreateEx import string",
+        "BBB music, sound, and data filename references",
+        "Continuum Entertainment BBB registry path"
+      ],
+      "format": "PE32",
+      "image_base": "0x00400000",
+      "machine": "0x014c",
+      "name": "Bbb.exe",
+      "offset": 39453,
+      "section_count": 4,
+      "sha256": "67bad421c57cdc7045513bc2c03375e5a01dd41b9b449b5333f06b4bc98a5713",
+      "size": 303104,
+      "size_of_image": 339968
+    },
+    {
+      "architecture": "Intel 80386",
+      "classification": "uninstaller-executable",
+      "endianness": "little",
+      "entry_rva": 15128,
+      "evidence": [
+        "Cuninst identifier",
+        "InstallDir and Uninstall strings",
+        "Continuum Entertainment registry path"
+      ],
+      "format": "PE32",
+      "image_base": "0x00400000",
+      "machine": "0x014c",
+      "name": "Cuninst.exe",
+      "offset": 57529006,
+      "section_count": 4,
+      "sha256": "05507eee089c3b6cdf249aa65a773f4acab300218c1baea14047c9348ebf373d",
+      "size": 90112,
+      "size_of_image": 98304
+    }
+  ],
+  "inputs": [
+    {
+      "architecture": "Intel 80386",
+      "endianness": "little",
+      "entry_rva": 28810,
+      "format": "PE32",
+      "image_base": "0x00400000",
+      "machine": "0x014c",
+      "offset": 0,
+      "path": "Setup.exe",
+      "section_count": 4,
+      "sha256": "0e88d3fc1caf3f0e595a18cc992aca330e981ec1e5f0fc01584d5a1fb3629d46",
+      "size": 471040,
+      "size_of_image": 565248
+    },
+    {
+      "archive_probe": "libarchive rejected as an unrecognized archive",
+      "format": "custom installer data; schema unresolved",
+      "observed_header": "01 00 00 00 [INSTALL]",
+      "path": "Setup.dat",
+      "scanned_mz_signatures": 576,
+      "sha256": "97fa68e97505a9b13952e7bb6993a1ef4e122e3b31d73bc1bf3f82efc442728e",
+      "size": 58446081,
+      "validated_embedded_pe_count": 2
+    }
+  ],
+  "schema_version": 1,
+  "segments": [
+    {
+      "input": "Setup.exe",
+      "name": "Setup.exe:headers",
+      "offset": 0,
+      "permissions": [
+        "read"
+      ],
+      "rva": 0,
+      "sha256": "814def6fe1f77fdadc06ff5397288c89411d749ed4810c2a13f7d7e589d63d59",
+      "size": 4096,
+      "type": "pe-header"
+    },
+    {
+      "input": "Setup.exe",
+      "name": "Setup.exe:.text",
+      "offset": 4096,
+      "permissions": [
+        "read",
+        "execute"
+      ],
+      "rva": 4096,
+      "sha256": "b1dd663211cc3c5c208ca961761734f7479082ec66b8c700a072eb5c820f1287",
+      "size": 57344,
+      "type": "code",
+      "virtual_size": 55288
+    },
+    {
+      "input": "Setup.exe",
+      "name": "Setup.exe:.rdata",
+      "offset": 61440,
+      "permissions": [
+        "read"
+      ],
+      "rva": 61440,
+      "sha256": "fc46253bab05d712e249b2b6eb029d0492bf3bf3dd6d9d02b1474993dfe2fdb0",
+      "size": 8192,
+      "type": "data",
+      "virtual_size": 5546
+    },
+    {
+      "input": "Setup.exe",
+      "name": "Setup.exe:.data",
+      "offset": 69632,
+      "permissions": [
+        "read",
+        "write"
+      ],
+      "rva": 69632,
+      "sha256": "f08d918649ba3ab9bd78ba8feac2f5b699e87ceed93866788bab18f59857a7f0",
+      "size": 8192,
+      "type": "data",
+      "virtual_size": 101160
+    },
+    {
+      "input": "Setup.exe",
+      "name": "Setup.exe:.rsrc",
+      "offset": 77824,
+      "permissions": [
+        "read"
+      ],
+      "rva": 172032,
+      "sha256": "6b49b85e33b722c1b7d5c50590a873aed7b15e289e03fc2d1ae5499e0a650964",
+      "size": 393216,
+      "type": "resources",
+      "virtual_size": 392552
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Setup.dat:unresolved:000",
+      "offset": 0,
+      "permissions": null,
+      "sha256": "7077fae1057c6bcb9434ae1e11550331864f961c5e68cec5ac58c4e27ae8aa92",
+      "size": 39453,
+      "type": "unresolved"
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Bbb.exe:headers",
+      "offset": 39453,
+      "permissions": [
+        "read"
+      ],
+      "rva": 0,
+      "sha256": "2576883fb1a198f6e9bb5d79dacc6d810deb70abb4b6ede56e6960187e156e9d",
+      "size": 4096,
+      "type": "pe-header"
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Bbb.exe:.text",
+      "offset": 43549,
+      "permissions": [
+        "read",
+        "execute"
+      ],
+      "rva": 4096,
+      "sha256": "945c60b821f7bdc625ae37cf83fab65c1506ce007f1e9ee3859ebb1da5f6ccb8",
+      "size": 266240,
+      "type": "code",
+      "virtual_size": 262450
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Bbb.exe:.rdata",
+      "offset": 309789,
+      "permissions": [
+        "read"
+      ],
+      "rva": 270336,
+      "sha256": "520363e92cd843d7d333e43ce9cecddf4ae6c56f089a023a884cb5254f00d2bc",
+      "size": 8192,
+      "type": "data",
+      "virtual_size": 6894
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Bbb.exe:.data",
+      "offset": 317981,
+      "permissions": [
+        "read",
+        "write"
+      ],
+      "rva": 278528,
+      "sha256": "3c36250d83249dcfe7db1d1e457381439e14728418ae1f5f711d7a067ee30825",
+      "size": 20480,
+      "type": "data",
+      "virtual_size": 56568
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Bbb.exe:.rsrc",
+      "offset": 338461,
+      "permissions": [
+        "read"
+      ],
+      "rva": 335872,
+      "sha256": "4f3426f558cfec83186989dd0da16bbfaa467c1bafcfc67bf332544d602fa424",
+      "size": 4096,
+      "type": "resources",
+      "virtual_size": 1792
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Setup.dat:unresolved:001",
+      "offset": 342557,
+      "permissions": null,
+      "sha256": "5976c293063ee3509b30ceef8f0f705271b6b94228ba8f851874be4a54a8ea03",
+      "size": 57186449,
+      "type": "unresolved"
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Cuninst.exe:headers",
+      "offset": 57529006,
+      "permissions": [
+        "read"
+      ],
+      "rva": 0,
+      "sha256": "618b8ab6cd6b14fd7257f96fee8d29b896f1f72c7867862953ab96c6b09ce653",
+      "size": 4096,
+      "type": "pe-header"
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Cuninst.exe:.text",
+      "offset": 57533102,
+      "permissions": [
+        "read",
+        "execute"
+      ],
+      "rva": 4096,
+      "sha256": "601551b7a4d0efb8581db5ff95c9d34c2232d19f56f89f038b121cf6bc50ce17",
+      "size": 45056,
+      "type": "code",
+      "virtual_size": 42859
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Cuninst.exe:.rdata",
+      "offset": 57578158,
+      "permissions": [
+        "read"
+      ],
+      "rva": 49152,
+      "sha256": "749062e9cae2ec03896570b39f60e054f033aebcc10588ba665231b244fa30a7",
+      "size": 8192,
+      "type": "data",
+      "virtual_size": 5326
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Cuninst.exe:.data",
+      "offset": 57586350,
+      "permissions": [
+        "read",
+        "write"
+      ],
+      "rva": 57344,
+      "sha256": "f34c17b86a45fd5469c985e0abeacbd4ef210bfa7760c7a64946d748addfef28",
+      "size": 8192,
+      "type": "data",
+      "virtual_size": 15416
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Cuninst.exe:.rsrc",
+      "offset": 57594542,
+      "permissions": [
+        "read"
+      ],
+      "rva": 73728,
+      "sha256": "a5c28ad459a8e19b7f454465526271a7440a64483170fad5a3a254b747e2e5da",
+      "size": 24576,
+      "type": "resources",
+      "virtual_size": 23728
+    },
+    {
+      "input": "Setup.dat",
+      "name": "Setup.dat:unresolved:002",
+      "offset": 57619118,
+      "permissions": null,
+      "sha256": "95fb79fb55d082b81129636653448dad328ac7ab502d5e66db357e1d02483284",
+      "size": 826963,
+      "type": "unresolved"
+    }
+  ],
+  "tool": "analysis/phase1/extract_pe.py"
+}
